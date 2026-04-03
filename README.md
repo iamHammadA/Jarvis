@@ -1,174 +1,102 @@
-# Jarvis – AI Voice Assistant 🤖
+# Jarvis - AI Voice Assistant 🤖
 
-**Jarvis** is a personal AI assistant built in Python that listens to your voice, responds intelligently, performs web searches, plays media, and interacts using Google's Generative AI. This project combines **speech recognition, text-to-speech, web automation, YouTube & image search, and AI-based chat** into a single, powerful assistant.
+A Python-based intelligent voice assistant that can search the web, play media, open applications, and respond using AI-powered text-to-speech.
+
+## ✨ Features
+
+- 🌐 **Web Search** – Perform Google searches directly via voice command  
+- 🎵 **Media Playback** – Play music and open media applications  
+- 🤖 **AI-Powered Responses** – Get intelligent answers using generative AI (optional)  
+- 💻 **System Control** – Open applications, browse the web, and execute system tasks  
+- 🔊 **Text-to-Speech** – Natural voice output for interactive responses  
 
 ---
 
-## 🚀 Features
+## 🛠️ Tech Stack
 
-- **Voice Activation:** Say `"Jarvis"` to activate the assistant.
-- **Voice Recognition:** Uses `speech_recognition` to understand natural language commands.
-- **Text-to-Speech:** Responds using `pyttsx3` for a natural voice assistant experience.
-- **Web Automation:** Automatically opens websites like Google, YouTube, Pinterest, Facebook, Amazon, and more.
-- **YouTube & Media Control:** Search and play YouTube videos or music directly by voice.
-- **Image Search:** Search for images on Google using voice commands.
-- **AI Chat Assistant:** Uses Google Generative AI (`gemini-1.5-flash`) to answer questions intelligently.
-- **Extensible Commands:** Easily add new voice commands and actions.
+| Technology | Purpose |
+|------------|---------|
+| Python | Core programming language |
+| SpeechRecognition | Voice input processing |
+| pyttsx3 | Offline text-to-speech engine |
+| webbrowser | URL handling and web automation |
+| os | System-level operations |
+| google-generativeai *(optional)* | AI-powered conversational responses |
 
 ---
 
 ## 📂 Project Structure
 
-```
 Jarvis/
 │
-├── jarvis.py                 # Main script
-├── names_of_audio.py         # Stores URLs for media commands
-├── youtube_api               # File containing YouTube API key
-├── api_key                   # File containing Google API key
-├── search_engine_id          # File containing Google Custom Search Engine ID
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
-```
+├── jarvis.py # Main assistant logic
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
+├── assets/ # (Optional) Icons, audio files, configs
+└── utils/ # (Optional) Helper modules
+
 
 ---
 
-## 🛠️ Installation
+## ⚙️ Installation & Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/iamHammadA/Jarvis.git
-   cd Jarvis
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configure API keys:**  
-   Create the following files in the project root and add your credentials:
-   - `youtube_api` → Your YouTube Data API key
-   - `api_key` → Your Google Custom Search API key
-   - `search_engine_id` → Your Google Custom Search Engine ID
-
-4. **Hardware requirement:**  
-   Ensure your microphone is connected and working.
-
----
-
-## 💻 Usage
-
-1. **Run the assistant:**
-   ```bash
-   python jarvis.py
-   ```
-
-2. **Activate Jarvis:**  
-   Say `"Jarvis"` to start giving commands.
-
-3. **Example voice commands:**
-
-   | Command Type     | Example Phrases                              |
-   |------------------|----------------------------------------------|
-   | Open websites    | `"open Google"`, `"open YouTube"`, `"open Facebook"` |
-   | Play media       | `"play Yah Dunya"`, `"play Jhol"`            |
-   | Search images    | `"search for a sunset"`                      |
-   | AI chat          | Ask any question after activation – Jarvis will answer using Google Generative AI |
-
----
-
-## 🔧 How It Works
-
-### 🎤 Speech Recognition
-- Listens continuously via the microphone.
-- Detects the keyword `"Jarvis"` to activate command mode.
-
-### 🧠 Command Parsing
-- Uses Python string matching and `numpy.char.lower` to detect and categorize commands.
-
-### 🌐 Web & Media Actions
-- Opens URLs in your default browser using the `webbrowser` module.
-- Plays YouTube videos or searches images using YouTube API & Google Custom Search API.
-
-### 🤖 AI Responses
-- Integrates with `google.generativeai` (Gemini 1.5 Flash) for natural language understanding.
-- Outputs responses via text-to-speech using `pyttsx3`.
-
----
-
-## ⚡ Dependencies
-
-Add these to your `requirements.txt`:
-
-```txt
-pyttsx3
-speechrecognition
-requests
-beautifulsoup4
-pytube
-mediapipe
-opencv-python
-google-generativeai
-numpy
-```
-
-Install all at once:
+### 1. Clone the Repository
 ```bash
+git clone https://github.com/iamHammadA/Jarvis.git
+cd Jarvis
+
+2. Install Dependencies
+
 pip install -r requirements.txt
+
+3. Run the Assistant
+
+python jarvis.py
+
+💡 Note: Ensure your microphone is enabled and permissions are granted for speech recognition to work properly.
+🎯 How It Works
+Listens to your voice via microphone
+Converts speech to text using SpeechRecognition
+Processes the command with keyword matching or AI logic
+Executes the corresponding task (web search, app launch, etc.)
+Responds audibly using pyttsx3 text-to-speech
+🧠 Example Commands
+Command
+Action
+"Open YouTube"
+Launches YouTube in your default browser
+"Search AI tutorials"
+Performs a Google search for the query
+"Play music"
+Opens your default music player or playlist
+"Tell me about Python"
+Fetches an AI-generated summary about Python
+"What's the time?"
+Speaks out the current system time
+🌟 Future Improvements
+Wake word detection ("Hey Jarvis") for hands-free activation
+Advanced NLP with transformer models for better intent recognition
+Cross-platform GUI using Tkinter or PyQt
+Smart home integration (IoT control via ESP8266/Arduino)
+Multi-language support and accent adaptation
+🤝 Contributing
+Contributions are welcome! To contribute:
+Fork the repository
+Create your feature branch:
+bash
+1
+Commit your changes:
+bash
+1
+Push to the branch:
+bash
+1
+Open a Pull Request 🚀
+⭐ Support
+If you find this project helpful, please consider giving it a star ⭐
+It helps the project reach more developers and encourages further development!
+📬 Contact
+Created by Hammad
+🔗 GitHub Profile
+📧 Feel free to reach out for collaborations or feedback!
 ```
-
----
-
-## 🎨 Customization
-
-- **Add new websites/commands:** Extend the command logic in `jarvis.py`.
-- **Add media URLs:** Update `names_of_audio.py` with new pre-defined media links.
-- **Adjust sensitivity:** Modify `recognizer.adjust_for_ambient_noise(source)` to fine-tune speech recognition.
-- **Change wake word:** Update the activation keyword detection logic as needed.
-
----
-
-## 🖼️ Screenshots / Demo
-
-> *(Optional: Add screenshots or GIFs of Jarvis in action to showcase your project)*
-
-Example placeholder:
-```
-[![Jarvis Demo](https://via.placeholder.com/600x400?text=Jarvis+In+Action)](https://your-demo-link)
-```
-
----
-
-## ⚖️ License
-
-This project is open-source. You are free to modify, reuse, or improve it for personal or educational projects.
-
-```
-MIT License
-
-Copyright (c) 2026 Hammad
-
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-```
-
----
-
-## 📫 Contact
-
-- **GitHub:** [iamHammadA](https://github.com/iamHammadA)
-- **Instagram:** [@iamHammadA](https://instagram.com/iamhammad.a)
-
----
-
-> ✅ **Pro Tip:** Save this file as `README.md` in your project root, then commit and push to GitHub:
->
-> ```bash
-   git add README.md
-   git commit -m "Add detailed professional README"
-   git push origin main
-   ```
-
----
-
-*Built with ❤️ by Hammad | Empowering voice-first AI interactions* 🎙️✨r
