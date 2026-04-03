@@ -1,6 +1,12 @@
+#!/bin/bash
+
+# Create README.md with full professional content
+cat > README.md << 'EOF'
 # Jarvis - AI Voice Assistant 🤖
 
 A Python-based intelligent voice assistant that can search the web, play media, open applications, and respond using AI-powered text-to-speech.
+
+---
 
 ## ✨ Features
 
@@ -27,76 +33,106 @@ A Python-based intelligent voice assistant that can search the web, play media, 
 
 ## 📂 Project Structure
 
+\`\`\`
 Jarvis/
 │
-├── jarvis.py # Main assistant logic
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-├── assets/ # (Optional) Icons, audio files, configs
-└── utils/ # (Optional) Helper modules
-
+├── jarvis.py          # Main assistant logic
+├── requirements.txt   # Python dependencies
+├── README.md          # Project documentation
+├── assets/            # (Optional) Icons, audio files, configs
+└── utils/             # (Optional) Helper modules
+\`\`\`
 
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the Repository
-```bash
+\`\`\`bash
 git clone https://github.com/iamHammadA/Jarvis.git
 cd Jarvis
+\`\`\`
 
-2. Install Dependencies
-
+### 2. Install Dependencies
+\`\`\`bash
 pip install -r requirements.txt
+\`\`\`
 
-3. Run the Assistant
-
+### 3. Run the Assistant
+\`\`\`bash
 python jarvis.py
+\`\`\`
 
-💡 Note: Ensure your microphone is enabled and permissions are granted for speech recognition to work properly.
-🎯 How It Works
-Listens to your voice via microphone
-Converts speech to text using SpeechRecognition
-Processes the command with keyword matching or AI logic
-Executes the corresponding task (web search, app launch, etc.)
-Responds audibly using pyttsx3 text-to-speech
-🧠 Example Commands
-Command
-Action
-"Open YouTube"
-Launches YouTube in your default browser
-"Search AI tutorials"
-Performs a Google search for the query
-"Play music"
-Opens your default music player or playlist
-"Tell me about Python"
-Fetches an AI-generated summary about Python
-"What's the time?"
-Speaks out the current system time
-🌟 Future Improvements
-Wake word detection ("Hey Jarvis") for hands-free activation
-Advanced NLP with transformer models for better intent recognition
-Cross-platform GUI using Tkinter or PyQt
-Smart home integration (IoT control via ESP8266/Arduino)
-Multi-language support and accent adaptation
-🤝 Contributing
+💡 **Note:** Ensure your microphone is enabled and permissions are granted for speech recognition to work properly.
+
+---
+
+## 🎯 How It Works
+
+1. Listens to your voice via microphone  
+2. Converts speech to text using SpeechRecognition  
+3. Processes the command with keyword matching or AI logic  
+4. Executes the corresponding task (web search, app launch, etc.)  
+5. Responds audibly using pyttsx3 text-to-speech  
+
+---
+
+## 🧠 Example Commands
+
+| Command | Action |
+|---------|--------|
+| "Open YouTube" | Launches YouTube in your default browser |
+| "Search AI tutorials" | Performs a Google search for the query |
+| "Play music" | Opens your default music player or playlist |
+| "Tell me about Python" | Fetches an AI-generated summary about Python |
+| "What's the time?" | Speaks out the current system time |
+
+---
+
+## 🌟 Future Improvements
+
+- Wake word detection ("Hey Jarvis") for hands-free activation  
+- Advanced NLP with transformer models for better intent recognition  
+- Cross-platform GUI using Tkinter or PyQt  
+- Smart home integration (IoT control via ESP8266/Arduino)  
+- Multi-language support and accent adaptation  
+
+---
+
+## 🤝 Contributing
+
 Contributions are welcome! To contribute:
-Fork the repository
-Create your feature branch:
-bash
-1
-Commit your changes:
-bash
-1
-Push to the branch:
-bash
-1
-Open a Pull Request 🚀
-⭐ Support
-If you find this project helpful, please consider giving it a star ⭐
+
+1. Fork the repository  
+2. Create your feature branch:  
+\`\`\`bash
+git checkout -b feature/AmazingFeature
+\`\`\`
+3. Commit your changes:  
+\`\`\`bash
+git commit -m 'Add some AmazingFeature'
+\`\`\`
+4. Push to the branch:  
+\`\`\`bash
+git push origin feature/AmazingFeature
+\`\`\`
+5. Open a Pull Request 🚀
+
+---
+
+## ⭐ Support
+
+If you find this project helpful, please consider giving it a star ⭐  
 It helps the project reach more developers and encourages further development!
-📬 Contact
-Created by Hammad
-🔗 GitHub Profile
+
+---
+
+## 📬 Contact
+
+Created by **Hammad**  
+🔗 [GitHub Profile](https://github.com/iamHammadA)  
 📧 Feel free to reach out for collaborations or feedback!
-```
+EOF
+
+# Confirm success
+echo "✅ README.md has been created/updated successfully!"
